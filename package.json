@@ -6,13 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "prettier --write . && next lint --fix"
   },
   "dependencies": {
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7",
+    "postcss": "^8.4.21",
+    "autoprefixer": "^10.4.14",
+    "prettier": "^2.8.5",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "prettier-plugin-tailwindcss": "^0.2.5"
   }
 }
