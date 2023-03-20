@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "prettier --write . && next lint --fix"
+    "lint:fix": "prettier --write . && next lint --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "next": "13.2.4",
@@ -22,7 +23,6 @@
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "eslint-config-prettier": "^8.7.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
