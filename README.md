@@ -109,14 +109,14 @@ git clone
 npm install
 ```
 
-4. Create a new branch
+1. Create a new branch from the development branch
 
 ```bash
 git checkout -b <branch-name>
 ```
 
-5. Make your changes
-6. Commit and push your changes
+2. Make your changes
+3. Commit and push your changes
 
 ```bash
 git add <file-name> # Add all the files/folders needed
