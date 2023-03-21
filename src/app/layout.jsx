@@ -1,9 +1,9 @@
-import { Open_Sans } from "next/font/google";
+import { Open_Sans as OpenSans } from "next/font/google";
 
 import "./globals.css";
-import { Header } from "./header";
+import Header from "./header";
 
-export const openSans = Open_Sans({
+export const openSans = OpenSans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-open-sans",
@@ -18,15 +18,15 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body
-        className={`relative min-h-screen w-screen max-w-[100vw] overflow-x-hidden bg-inquares-loafer-500 ${openSans.className}`}
-      >
-        <Header />
-        <main>{children}</main>
-      </body>
-    </html>
-  );
-}
+const RootLayout = ({ children }) => (
+  <html lang="en">
+    <body
+      className={`relative min-h-screen w-screen max-w-[100vw] overflow-x-hidden bg-inquares-loafer-500 ${openSans.className}`}
+    >
+      <Header />
+      <main className="flex flex-col gap-20 py-8 md:py-12">{children}</main>
+    </body>
+  </html>
+);
+
+export default RootLayout;
