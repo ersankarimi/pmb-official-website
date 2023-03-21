@@ -28,6 +28,14 @@
     "react-hooks/exhaustive-deps": "warn",
     "no-unused-vars": "warn",
     "react/jsx-props-no-spreading": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": false,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
     "react/function-component-definition": [
       "error",
       {
