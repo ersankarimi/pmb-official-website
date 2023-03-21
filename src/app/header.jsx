@@ -17,7 +17,7 @@ const NavLink = ({ children, href, onClick }) => {
   return (
     <li>
       <Link className="w-full" href={href} onClick={onClick}>
-        <div className="relative z-0 w-max overflow-hidden rounded-md p-2 transition-all duration-500 before:absolute before:bottom-0 before:left-0 before:top-1/2 before:w-5/12 before:bg-inquares-pizazz-300 before:transition-all before:duration-500 hover:before:w-full sm:p-1">
+        <div className="relative z-0 w-max overflow-hidden rounded-sm p-2 transition-all duration-500 before:absolute before:bottom-0 before:left-0 before:top-1/2 before:w-5/12 before:bg-inquares-pizazz-300 before:transition-all before:duration-500 hover:before:w-full sm:p-1">
           <span className="relative text-2xl font-semibold text-inquares-blue-whale-500/80 duration-200 hover:text-inquares-blue-whale-500 sm:text-base md:text-lg">
             {children}
           </span>
