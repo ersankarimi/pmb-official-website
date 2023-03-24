@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/app/**/*.{js,jsx}", "./src/components/**/*.{js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        "open-sans": ["Open Sans", "sans-serif"],
+      },
       colors: {
         inquares: {
           loafer: {
