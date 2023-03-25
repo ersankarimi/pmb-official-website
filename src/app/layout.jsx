@@ -24,7 +24,7 @@ const RootLayout = ({ children }) => (
       className={`relative flex min-h-screen w-screen max-w-[100vw] flex-col overflow-x-hidden bg-inquares-loafer-500 ${openSans.className} font-open-sans`}
     >
       <Header />
-      <main className="flex flex-[2] flex-col gap-20 py-8 md:py-12">
+      <main className="m-auto flex max-w-7xl flex-[2] flex-col gap-40 overflow-x-hidden p-4 lg:container md:p-8 xl:p-12">
         {children}
       </main>
     </body>
