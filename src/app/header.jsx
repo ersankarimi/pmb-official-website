@@ -1,23 +1,32 @@
 "use client";
 
-import {
-  Menu,
-  MenuButton,
-  MenuButtonArrow,
-  MenuItem,
-  useMenuState,
-} from "ariakit/menu";
 import cn from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { MdMenu } from "react-icons/md";
+import { useEffect, useState } from "react";
+import { MdKeyboardArrowDown, MdMenu } from "react-icons/md";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionHeader,
+  AccordionItem,
+  AccordionTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  Separator,
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/components";
 
 import logoHmif from "../../public/logo-hmif.png";
 import logoInquares from "../../public/logo-inquares.png";
 import logoItk from "../../public/logo-itk.png";
 import logoKm from "../../public/logo-km.png";
 import logoPmb from "../../public/logo-pmb.png";
+import { useMediaQuery } from "../hooks";
 
 const logoClasses = "h-8 sm:h-10 w-full md:h-12 object-contain object-center";
 const programKerjaList = [
@@ -51,34 +60,154 @@ const programKerjaList = [
   },
 ];
 
-const NavLink = ({ children, href, onClick }) => (
-  <li>
+const lainnyaItems = [
+  {
+    label: "Informasi",
+    href: "/informasi",
+  },
+  {
+    label: "Acara dan kagiatan",
+    href: "/acara-dan-kagiatan",
+  },
+  {
+    label: "Sumber Belajar",
+    href: "/sumber-belajar",
+  },
+];
+
+const NavLink = ({ children, href, value, onClick, ...props }) => (
+  <ToggleGroupItem {...props} asChild value={value}>
     <Link
-      className="group w-full outline-1 focus:outline-inquares-hippie-green-300"
-      href={href}
+      tabIndex={0}
+      role="link"
       onClick={onClick}
+      href={href}
+      className="group w-full outline-1 focus:outline-inquares-hippie-green-300"
     >
-      <div className="before:content-[' '] relative z-0 w-max overflow-hidden rounded-sm p-2 transition-all duration-500 before:absolute before:bottom-0 before:left-0 before:top-1/2 before:w-5/12 before:bg-inquares-pizazz-300 before:transition-all before:duration-500 hover:before:w-full group-focus:before:w-full sm:p-1">
-        <span className="relative text-2xl font-semibold text-inquares-blue-whale-500/80 duration-200 hover:text-inquares-blue-whale-500 sm:text-base md:text-lg">
+      <div className="relative z-0 w-max overflow-hidden rounded-sm p-2 transition-all duration-500 sm:p-1">
+        <span className="relative text-2xl font-semibold text-inquares-blue-whale-500/80 duration-200 hover:text-inquares-blue-whale-500 lg:text-base xl:text-lg">
           {children}
         </span>
       </div>
     </Link>
-  </li>
+  </ToggleGroupItem>
+);
+
+const DropdownNavLink = ({ triggerTextValue, dropdownItems }) => (
+  <DropdownMenu>
+    <DropdownMenuTrigger asChild>
+      <button
+        type="button"
+        className="group flex w-full items-center outline-1 focus:outline-inquares-hippie-green-300"
+      >
+        <div className="relative z-0 w-max overflow-hidden rounded-sm p-2 transition-all duration-500 md:p-1">
+          <span className="relative text-2xl font-semibold text-inquares-blue-whale-500/80 duration-200 hover:text-inquares-blue-whale-500 lg:text-base xl:text-lg">
+            {triggerTextValue}
+          </span>
+        </div>
+        <MdKeyboardArrowDown className="text-inquares-blue-whale-500/80 group-hover:text-inquares-blue-whale-500" />
+      </button>
+    </DropdownMenuTrigger>
+    <DropdownMenuContent
+      className="z-20 flex flex-col gap-1 border-b-2 border-b-inquares-blue-whale-200 bg-inquares-loafer-500 py-2 sm:w-48 sm:rounded-lg sm:shadow-lg"
+      arrowFillClassName="fill-transparent"
+    >
+      {dropdownItems.map(({ label, href }) => (
+        <DropdownMenuItem
+          key={`dropdown-menu-item-${href}`}
+          asChild
+          className="rounded-md px-3 py-2 text-inquares-blue-whale-500/80 outline-none transition-all duration-200 hover:bg-inquares-pizazz-200 hover:text-inquares-blue-whale-700 sm:rounded-none"
+        >
+          <Link href={href}>{label}</Link>
+        </DropdownMenuItem>
+      ))}
+    </DropdownMenuContent>
+  </DropdownMenu>
+);
+
+const AccordionNavLink = ({
+  value,
+  isOpen,
+  triggerTextValue,
+  accordionItemValue,
+  accordionItems,
+  onValueChange,
+}) => (
+  <Accordion
+    type="single"
+    collapsible
+    onValueChange={onValueChange}
+    open={isOpen}
+    value={value}
+  >
+    <AccordionItem value={accordionItemValue}>
+      <AccordionHeader>
+        <AccordionTrigger asChild>
+          <button
+            type="button"
+            className="group flex w-full items-center outline-1 focus:outline-inquares-hippie-green-300"
+          >
+            <div className="relative z-0 w-max overflow-hidden rounded-sm p-2 transition-all duration-500 md:p-1">
+              <span className="relative text-2xl font-semibold text-inquares-blue-whale-500/80 duration-200 hover:text-inquares-blue-whale-500 lg:text-base xl:text-lg">
+                {triggerTextValue}
+              </span>
+            </div>
+            <MdKeyboardArrowDown className="text-inquares-blue-whale-500/80 group-hover:text-inquares-blue-whale-500" />
+          </button>
+        </AccordionTrigger>
+      </AccordionHeader>
+      <AccordionContent className="flex flex-col gap-2 rounded-xl py-2">
+        {accordionItems.map(({ label, href }) => (
+          <Link
+            href={href}
+            key={`accordion-navlink-${href}`}
+            className="w-full px-3 py-2 text-inquares-blue-whale-500/80 transition-all duration-200 hover:bg-inquares-pizazz-200 hover:text-inquares-blue-whale-700 sm:rounded-none"
+          >
+            {label}
+          </Link>
+        ))}
+        <Separator className="h-[1px] w-full bg-inquares-blue-whale-400/80" />
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
 );
 
 const Header = () => {
-  const menu = useMenuState({ gutter: 12 });
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState("beranda");
+  const [selectedAccordionItem, setSelectedAccordionItem] = useState("");
+  const isUnderLG = useMediaQuery("(max-width: 1024px)");
 
-  const handleToggleNavbar = () => {
-    document.body.style.overflow = navbarIsOpen ? "auto" : "hidden";
-    setNavbarIsOpen((currentState) => !currentState);
+  const handlePageChange = (page) => {
+    if (page) {
+      setCurrentPage(page);
+    }
   };
 
+  const handleAccordionChange = (value) => {
+    console.log({ value }, "kalimantan minimal lah");
+    setSelectedAccordionItem(value);
+  };
+
+  const handleToggleNavbar = () => {
+    if (isUnderLG) {
+      document.body.style.overflow = navbarIsOpen ? "auto" : "hidden";
+      setNavbarIsOpen((currentState) => !currentState);
+    } else {
+      setNavbarIsOpen(true);
+    }
+  };
+
+  useEffect(() => {
+    if (isUnderLG) {
+      setNavbarIsOpen(false);
+      document.body.style.overflow = "auto";
+    }
+  }, [isUnderLG]);
+
   return (
-    <header className="sticky top-0 z-50 m-auto w-full bg-inquares-loafer-500/80 py-3 px-6 shadow-sm backdrop-blur-[6px] lg:container md:px-8 lg:px-12 lg:py-4">
-      <div className="flex w-full items-center justify-between">
+    <header className="sticky top-0 z-10 m-auto w-full bg-inquares-loafer-500/80 py-3 px-6 shadow-sm backdrop-blur-[6px] md:px-8 lg:px-12 lg:py-4">
+      <div className="m-auto flex w-full items-center justify-between lg:container">
         <div className="flex items-center gap-2 md:gap-4">
           <Image src={logoItk} alt="Logo ITK" className={logoClasses} />
           <Image src={logoKm} alt="Logo KM ITK" className={logoClasses} />
@@ -90,58 +219,79 @@ const Header = () => {
           />
           <Image src={logoPmb} alt="Logo PMB" className={logoClasses} />
         </div>
-
         <nav className="flex h-max items-center gap-4">
           <button
             type="button"
-            className="rounded-md bg-inquares-hippie-green-300/60 p-1 outline-none ring-inquares-hippie-green-400/80 backdrop-blur-xl transition-all duration-200 hover:bg-inquares-hippie-green-300/80 focus:ring-2 active:bg-inquares-hippie-green-300 active:ring-[3px] sm:hidden"
+            className="rounded-md bg-inquares-hippie-green-300/60 p-1 outline-none ring-inquares-hippie-green-400/80 backdrop-blur-xl transition-all duration-200 hover:bg-inquares-hippie-green-300/80 focus:ring-2 active:bg-inquares-hippie-green-300 active:ring-[3px] lg:hidden"
             onClick={handleToggleNavbar}
           >
             <MdMenu className="h-6 w-6 text-inquares-hippie-green-800/60 hover:text-inquares-hippie-green-800/80 active:text-inquares-hippie-green-800" />
           </button>
 
-          <ul
-            className={cn(
-              "absolute left-0 top-full h-screen w-full flex-col gap-3 bg-inquares-loafer-500 p-8 sm:static sm:flex sm:h-auto sm:flex-row sm:bg-transparent sm:p-0 lg:gap-8",
-              {
-                hidden: !navbarIsOpen,
-                flex: navbarIsOpen,
-              },
-            )}
+          <ToggleGroup
+            asChild
+            type="single"
+            value={currentPage}
+            onValueChange={handlePageChange}
           >
-            <NavLink href="/" onClick={handleToggleNavbar}>
-              Beranda
-            </NavLink>
-            <NavLink href="/" onClick={handleToggleNavbar}>
-              Tentang Kami
-            </NavLink>
+            <ul
+              className={cn(
+                "absolute left-0 top-full h-screen w-full flex-col gap-3 overflow-auto bg-inquares-loafer-500 p-8 pb-20 lg:static lg:flex lg:h-auto lg:flex-row lg:gap-8 lg:bg-transparent lg:p-0",
+                {
+                  hidden: !navbarIsOpen,
+                  flex: navbarIsOpen,
+                },
+              )}
+            >
+              <li>
+                <NavLink value="beranda" href="/" onClick={handleToggleNavbar}>
+                  Beranda
+                </NavLink>
+              </li>
 
-            <li className="relative">
-              <MenuButton state={menu} className="flex items-center">
-                <div className="group w-full outline-1 focus:outline-inquares-hippie-green-300">
-                  <div className="before:content-[' '] relative z-0 w-max overflow-hidden rounded-sm p-2 transition-all duration-500 before:absolute before:bottom-0 before:left-0 before:top-1/2 before:w-5/12 before:bg-inquares-pizazz-300 before:transition-all before:duration-500 hover:before:w-full group-focus:before:w-full sm:p-1">
-                    <span className="relative text-2xl font-semibold text-inquares-blue-whale-500/80 duration-200 hover:text-inquares-blue-whale-500 sm:text-base md:text-lg">
-                      Program Kerja
-                    </span>
-                  </div>
-                </div>
-                <MenuButtonArrow />
-              </MenuButton>
-              <Menu
-                state={menu}
-                className="inset-0 flex flex-col gap-1 border-b-2 border-b-inquares-blue-whale-200 bg-inquares-loafer-500 py-2 sm:w-48 sm:rounded-lg sm:shadow-lg"
-              >
-                {programKerjaList.map(({ label, href }) => (
-                  <MenuItem
-                    className="rounded-md px-3 py-2 text-inquares-blue-whale-500/80 transition-all duration-200 hover:bg-inquares-pizazz-200 hover:text-inquares-blue-whale-700 sm:rounded-none"
-                    key={`menu-item-navbar-proker-${href}`}
-                  >
-                    <Link href="/">{label}</Link>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </li>
-          </ul>
+              <li>
+                <NavLink value="tentang" href="/" onClick={handleToggleNavbar}>
+                  Tentang
+                </NavLink>
+              </li>
+
+              <li>
+                {!isUnderLG ? (
+                  <DropdownNavLink
+                    triggerTextValue="Program Kerja"
+                    dropdownItems={programKerjaList}
+                  />
+                ) : (
+                  <AccordionNavLink
+                    isOpen={selectedAccordionItem === "program-kerja"}
+                    onValueChange={handleAccordionChange}
+                    triggerTextValue="Program Kerja"
+                    value={selectedAccordionItem}
+                    accordionItemValue="program-kerja"
+                    accordionItems={programKerjaList}
+                  />
+                )}
+              </li>
+
+              <li>
+                {!isUnderLG ? (
+                  <DropdownNavLink
+                    triggerTextValue="Lainnya"
+                    dropdownItems={lainnyaItems}
+                  />
+                ) : (
+                  <AccordionNavLink
+                    value={selectedAccordionItem}
+                    isOpen={selectedAccordionItem === "lainnya"}
+                    onValueChange={handleAccordionChange}
+                    triggerTextValue="Lainnya"
+                    accordionItemValue="lainnya"
+                    accordionItems={lainnyaItems}
+                  />
+                )}
+              </li>
+            </ul>
+          </ToggleGroup>
         </nav>
       </div>
     </header>
