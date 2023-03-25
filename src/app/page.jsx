@@ -60,7 +60,7 @@ const Home = () => (
         />
       </picture>
       <div className="relative m-auto flex flex-col gap-8 sm:max-w-[80%]">
-        <div className="flex w-1/2 flex-col gap-1 lg:w-full">
+        <div className="flex flex-col gap-1">
           <h1 className="text-3xl font-bold tracking-wide text-inquares-hippie-green-900 lg:text-4xl">
             Tentang Kami
           </h1>
