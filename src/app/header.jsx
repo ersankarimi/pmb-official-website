@@ -76,7 +76,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-inquares-loafer-500 py-2 px-4 shadow-sm md:m-auto lg:py-4">
+    <header className="sticky top-0 z-50 w-full bg-inquares-loafer-500/80 py-2 px-4 shadow-sm backdrop-blur-[6px] md:m-auto lg:py-4">
       <div className="m-auto flex w-full items-center justify-between md:container">
         <div className="flex items-center gap-2 md:gap-4">
           <Image src={logoItk} alt="HMIF Logo" className={logoClasses} />
