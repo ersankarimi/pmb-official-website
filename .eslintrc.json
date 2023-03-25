@@ -21,6 +21,7 @@
     "prettier/prettier": 0,
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
+    "import/extensions": ["error", "never", { "svg": "always" }],
     "no-console": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
@@ -30,6 +31,8 @@
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
     "react/function-component-definition": [
       "error",
       {
