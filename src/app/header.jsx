@@ -77,7 +77,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 m-auto w-full bg-inquares-loafer-500/80 py-3 px-4 shadow-sm backdrop-blur-[6px] lg:container md:px-8 lg:px-12 lg:py-4">
+    <header className="sticky top-0 z-50 m-auto w-full bg-inquares-loafer-500/80 py-3 px-6 shadow-sm backdrop-blur-[6px] lg:container md:px-8 lg:px-12 lg:py-4">
       <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-2 md:gap-4">
           <Image src={logoItk} alt="Logo ITK" className={logoClasses} />
