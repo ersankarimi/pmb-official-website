@@ -185,7 +185,6 @@ const Header = () => {
   };
 
   const handleAccordionChange = (value) => {
-    console.log({ value }, "kalimantan minimal lah");
     setSelectedAccordionItem(value);
   };
 
@@ -199,7 +198,8 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (isUnderLG) {
+    setSelectedAccordionItem("");
+    if (!isUnderLG) {
       setNavbarIsOpen(false);
       document.body.style.overflow = "auto";
     }
