@@ -28,6 +28,7 @@
     "react-hooks/exhaustive-deps": "warn",
     "no-unused-vars": "warn",
     "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
