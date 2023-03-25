@@ -14,6 +14,7 @@ import { useState } from "react";
 import { MdMenu } from "react-icons/md";
 
 import logoHmif from "../../public/logo-hmif.png";
+import logoInquares from "../../public/logo-inquares.png";
 import logoItk from "../../public/logo-itk.png";
 import logoKm from "../../public/logo-km.png";
 import logoPmb from "../../public/logo-pmb.png";
@@ -79,10 +80,15 @@ const Header = () => {
     <header className="sticky top-0 z-50 m-auto w-full bg-inquares-loafer-500/80 py-3 px-4 shadow-sm backdrop-blur-[6px] lg:container md:px-8 lg:px-12 lg:py-4">
       <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-2 md:gap-4">
-          <Image src={logoItk} alt="HMIF Logo" className={logoClasses} />
-          <Image src={logoKm} alt="HMIF Logo" className={logoClasses} />
-          <Image src={logoHmif} alt="HMIF Logo" className={logoClasses} />
-          <Image src={logoPmb} alt="HMIF Logo" className={logoClasses} />
+          <Image src={logoItk} alt="Logo ITK" className={logoClasses} />
+          <Image src={logoKm} alt="Logo KM ITK" className={logoClasses} />
+          <Image src={logoHmif} alt="Logo HMIF" className={logoClasses} />
+          <Image
+            src={logoInquares}
+            alt="Logo INQUARES"
+            className={logoClasses}
+          />
+          <Image src={logoPmb} alt="Logo PMB" className={logoClasses} />
         </div>
 
         <nav className="flex h-max items-center gap-4">
