@@ -76,8 +76,8 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-inquares-loafer-500/80 py-2 px-4 shadow-sm backdrop-blur-[6px] md:m-auto lg:py-4">
-      <div className="m-auto flex w-full items-center justify-between md:container">
+    <header className="sticky top-0 z-50 m-auto w-full bg-inquares-loafer-500/80 py-3 px-4 shadow-sm backdrop-blur-[6px] lg:container md:px-8 lg:px-12 lg:py-4">
+      <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-2 md:gap-4">
           <Image src={logoItk} alt="HMIF Logo" className={logoClasses} />
           <Image src={logoKm} alt="HMIF Logo" className={logoClasses} />
@@ -88,15 +88,15 @@ const Header = () => {
         <nav className="flex h-max items-center gap-4">
           <button
             type="button"
-            className="rounded-sm transition-all duration-200 focus:ring-2 focus:ring-inquares-hippie-green-500 active:ring-[3px] sm:hidden"
+            className="rounded-md bg-inquares-hippie-green-300/60 p-1 outline-none ring-inquares-hippie-green-400/80 backdrop-blur-xl transition-all duration-200 hover:bg-inquares-hippie-green-300/80 focus:ring-2 active:bg-inquares-hippie-green-300 active:ring-[3px] sm:hidden"
             onClick={handleToggleNavbar}
           >
-            <MdMenu className="h-6 w-6 text-inquares-blue-whale-500" />
+            <MdMenu className="h-6 w-6 text-inquares-hippie-green-800/60 hover:text-inquares-hippie-green-800/80 active:text-inquares-hippie-green-800" />
           </button>
 
           <ul
             className={cn(
-              "absolute left-0 top-full h-screen w-full flex-col gap-8 bg-inquares-loafer-500 p-8 sm:static sm:flex sm:h-auto sm:flex-row sm:bg-transparent sm:p-0",
+              "absolute left-0 top-full h-screen w-full flex-col gap-3 bg-inquares-loafer-500 p-8 sm:static sm:flex sm:h-auto sm:flex-row sm:bg-transparent sm:p-0 lg:gap-8",
               {
                 hidden: !navbarIsOpen,
                 flex: navbarIsOpen,
