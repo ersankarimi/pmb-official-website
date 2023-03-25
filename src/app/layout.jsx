@@ -21,10 +21,12 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang="en">
     <body
-      className={`relative min-h-screen w-screen max-w-[100vw] overflow-x-hidden bg-inquares-loafer-500 ${openSans.className} font-open-sans`}
+      className={`relative flex min-h-screen w-screen max-w-[100vw] flex-col overflow-x-hidden bg-inquares-loafer-500 ${openSans.className} font-open-sans`}
     >
       <Header />
-      <main className="flex flex-col gap-20 py-8 md:py-12">{children}</main>
+      <main className="flex flex-[2] flex-col gap-20 py-8 md:py-12">
+        {children}
+      </main>
     </body>
   </html>
 );
