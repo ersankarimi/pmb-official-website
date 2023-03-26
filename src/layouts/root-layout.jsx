@@ -99,7 +99,7 @@ const NavLink = ({ children, href, onClick }) => (
 );
 
 const DropdownNavLink = ({ triggerTextValue, dropdownItems }) => (
-  <DropdownMenu>
+  <DropdownMenu modal={false}>
     <DropdownMenuTrigger asChild>
       <button
         type="button"
