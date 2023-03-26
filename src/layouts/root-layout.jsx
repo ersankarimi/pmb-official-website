@@ -20,11 +20,11 @@ import {
 
 import { useMediaQuery } from "@/hooks";
 
-import logoHmif from "../../../public/logo-hmif.png";
-import logoInquares from "../../../public/logo-inquares.png";
-import logoItk from "../../../public/logo-itk.png";
-import logoKm from "../../../public/logo-km.png";
-import logoPmb from "../../../public/logo-pmb.png";
+import logoHmif from "../../public/logo-hmif.png";
+import logoInquares from "../../public/logo-inquares.png";
+import logoItk from "../../public/logo-itk.png";
+import logoKm from "../../public/logo-km.png";
+import logoPmb from "../../public/logo-pmb.png";
 
 export const openSans = OpenSans({
   subsets: ["latin"],
@@ -117,7 +117,7 @@ const DropdownNavLink = ({ triggerTextValue, dropdownItems }) => (
         <DropdownMenuItem
           key={`dropdown-menu-item-${href}`}
           asChild
-          className="rounded-md px-3 py-2 text-inquares-blue-whale-500/80 outline-none transition-all duration-200 hover:bg-inquares-pizazz-200 hover:text-inquares-blue-whale-700 sm:rounded-none"
+          className="rounded-md px-3 py-2 text-inquares-blue-whale-500/80 outline-none transition-all duration-200 hover:bg-inquares-pizazz-200 hover:text-inquares-blue-whale-700 focus:bg-inquares-pizazz-200 focus:ring-2 focus:ring-inquares-pizazz-500/60 sm:rounded-none"
         >
           <Link href={href}>{label}</Link>
         </DropdownMenuItem>
