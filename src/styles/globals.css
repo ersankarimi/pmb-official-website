@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen max-w-[100vw] overflow-x-hidden bg-inquares-loafer-500;
+  }
+
+  #__next {
+    @apply relative w-full;
+  }
+}

@@ -1,6 +1,5 @@
-"use client";
-
 import cn from "classnames";
+import { Open_Sans as OpenSans } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -17,16 +16,30 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   Separator,
-  ToggleGroup,
-  ToggleGroupItem,
 } from "@/components";
 
-import logoHmif from "../../public/logo-hmif.png";
-import logoInquares from "../../public/logo-inquares.png";
-import logoItk from "../../public/logo-itk.png";
-import logoKm from "../../public/logo-km.png";
-import logoPmb from "../../public/logo-pmb.png";
-import { useMediaQuery } from "../hooks";
+import { useMediaQuery } from "@/hooks";
+
+import logoHmif from "../../../public/logo-hmif.png";
+import logoInquares from "../../../public/logo-inquares.png";
+import logoItk from "../../../public/logo-itk.png";
+import logoKm from "../../../public/logo-km.png";
+import logoPmb from "../../../public/logo-pmb.png";
+
+export const openSans = OpenSans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-open-sans",
+});
+
+export const metadata = {
+  title: "PMB HMIF 2023",
+  description: "Website Departemen Pengembangan Minat dan Bakat HMIF 2023",
+  icons: {
+    icon: "/logo-pmb.png",
+    shortcut: "/logo-pmb.png",
+  },
+};
 
 const logoClasses = "h-8 sm:h-10 w-full md:h-12 object-contain object-center";
 const programKerjaList = [
@@ -75,9 +88,10 @@ const lainnyaItems = [
   },
 ];
 
-const NavLink = ({ children, href, value, onClick, ...props }) => (
+const NavLink = ({ children, href, onClick }) => (
   <Link
     href={href}
+    onClick={onClick}
     className="flex items-center rounded-sm p-1 text-2xl font-semibold text-inquares-blue-whale-500/70 outline-none transition-all duration-200 hover:text-inquares-blue-whale-500 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400 lg:text-base xl:text-lg"
   >
     {children}
@@ -157,15 +171,8 @@ const AccordionNavLink = ({
 
 const Header = () => {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState("beranda");
   const [selectedAccordionItem, setSelectedAccordionItem] = useState("");
   const isUnderLG = useMediaQuery("(max-width: 1024px)");
-
-  const handlePageChange = (page) => {
-    if (page) {
-      setCurrentPage(page);
-    }
-  };
 
   const handleAccordionChange = (value) => {
     setSelectedAccordionItem(value);
@@ -189,7 +196,7 @@ const Header = () => {
   }, [isUnderLG]);
 
   return (
-    <header className="sticky top-0 z-10 m-auto w-full bg-red-500 bg-inquares-loafer-500/80 py-3 px-6 shadow-sm backdrop-blur-[6px] md:px-8 lg:px-12 lg:py-4">
+    <header className="sticky top-0 z-10 m-auto w-full bg-inquares-loafer-500 bg-inquares-loafer-500/80 py-3 px-6 shadow-sm backdrop-blur-[6px] md:px-8 lg:px-12 lg:py-4">
       <div className="m-auto flex w-full items-center justify-between lg:container">
         <div className="flex items-center gap-2 md:gap-4">
           <Image src={logoItk} alt="Logo ITK" className={logoClasses} />
@@ -221,13 +228,13 @@ const Header = () => {
             )}
           >
             <li className="flex items-center">
-              <NavLink value="beranda" href="/" onClick={handleToggleNavbar}>
+              <NavLink href="/" onClick={handleToggleNavbar}>
                 Beranda
               </NavLink>
             </li>
 
             <li className="flex items-center">
-              <NavLink value="tentang" href="/" onClick={handleToggleNavbar}>
+              <NavLink href="/" onClick={handleToggleNavbar}>
                 Tentang
               </NavLink>
             </li>
@@ -274,4 +281,11 @@ const Header = () => {
   );
 };
 
-export default Header;
+export const RootLayout = ({ children }) => (
+  <>
+    <Header />
+    <main className="m-auto flex max-w-7xl flex-[2] flex-col gap-40 overflow-x-hidden p-4 lg:container md:p-8 xl:p-12">
+      {children}
+    </main>
+  </>
+);
