@@ -10,6 +10,10 @@ module.exports = {
       fontFamily: {
         "open-sans": ["Open Sans", "sans-serif"],
       },
+      backgroundImage: {
+        "gradient-beranda-proker-card":
+          "linear-gradient(to right top, #c0d1b6, #b4c8a8, #a8bf9a, #9db78d, #91ae7f)",
+      },
       colors: {
         inquares: {
           loafer: {
