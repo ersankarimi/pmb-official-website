@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
+  reactStrictMode: true,
+  swcMinify: true,
+  pageExtensions: ["page.jsx"],
+  modularizeImports: {
+    "react-icons": {
+      transform: "react-icons/{{member}}",
+    },
   },
 };
 

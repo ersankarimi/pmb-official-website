@@ -1,8 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/app/**/*.{js,jsx}", "./src/components/**/*.{js,jsx}"],
+  content: [
+    "./src/pages/**/*.{js,jsx}",
+    "./src/components/**/*.{js,jsx}",
+    "./src/layouts/**/*.{js,jsx}",
+  ],
   theme: {
     extend: {
+      fontFamily: {
+        "open-sans": ["Open Sans", "sans-serif"],
+      },
+      backgroundImage: {
+        "gradient-beranda-proker-card":
+          "linear-gradient(to right top, #c0d1b6, #b4c8a8, #a8bf9a, #9db78d, #91ae7f)",
+      },
       colors: {
         inquares: {
           loafer: {
