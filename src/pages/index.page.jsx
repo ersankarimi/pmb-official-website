@@ -4,10 +4,17 @@ import { MdArrowForward } from "react-icons/md";
 
 import { Separator } from "@/components";
 
+import databaseCapaianMahasiswaIllustration from "../../public/database-capaian-mahasiswa-illustration.png";
+import hackathonHmifIllustration from "../../public/hackathon-hmif-illustration.png";
 import heroTentangKami from "../../public/hero-tentang-kami.png";
 import heroImage from "../../public/hero.png";
+import kuliahTamuIllustration from "../../public/kuliah-tamu-illustration.png";
+import mappingKompetensiDanMinatIllustration from "../../public/mapping-kompetensi-dan-minat-illustration.png";
+import ngobrolSantaiIllustration from "../../public/ngobrol-santai-illustration.png";
+import programKompetensiDanKeterampilanIllustration from "../../public/program-kompetensi-dan-keterampilan-illustration.png";
+import videoLearningCenterIllustration from "../../public/video-learning-center-illustration.png";
 
-const Home = () => (
+const Home = ({ programKerjaList }) => (
   <>
     <section className="grid grid-cols-1 grid-rows-[max-content_1fr] gap-12 md:grid-rows-none lg:grid-cols-[1fr_1fr] xl:grid-cols-[1.25fr_1fr] 2xl:grid-cols-[1.5fr_1fr]">
       <div className="flex h-max flex-col items-center justify-center gap-8 text-center lg:items-start lg:text-left">
@@ -86,7 +93,129 @@ const Home = () => (
         </Link>
       </div>
     </section>
+
+    <section className="flex flex-col items-center gap-20">
+      <div className="flex flex-col items-center gap-2">
+        <h2 className="text-3xl font-bold tracking-wide text-inquares-hippie-green-600 lg:text-4xl 2xl:text-5xl">
+          Program Kerja
+        </h2>
+        <p className="text-center text-lg lg:w-3/4">
+          PMB memiliki beberapa program kerja yang bisa membantu mengoptimalkan
+          minat dan bakat anda
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:grid-rows-1">
+        {programKerjaList.map(({ id, title, description, image, link }) => {
+          if (title === "Hackathon HMIF") {
+            return (
+              <Link
+                key={`beranda-program-kerja-list-item-${id}`}
+                href={link}
+                className="grid content-center items-center justify-center gap-8 overflow-hidden rounded-lg bg-gradient-beranda-proker-card py-8 px-5 outline-none ring-inquares-hippie-green-500/80 delay-75 duration-300 hover:ring-4 focus:ring-4 sm:col-span-2 sm:row-start-1 md:col-start-1 md:grid-cols-[1fr_1.25fr] md:px-12 2xl:col-span-1 2xl:col-start-1 2xl:row-span-2 2xl:row-start-1 2xl:grid-cols-1"
+              >
+                <picture className="flex h-40 w-full md:h-64  xl:h-56 2xl:h-64">
+                  <Image
+                    src={image}
+                    alt={`${title} Illustration`}
+                    className="h-full w-full object-contain sm:scale-105 2xl:scale-100"
+                  />
+                </picture>
+
+                <div className="text-inquares flex flex-col items-center justify-center gap-2 text-center text-inquares-hippie-green-900">
+                  <h1 className="text-xl font-bold sm:text-2xl">{title}</h1>
+                  <p>{description}</p>
+                </div>
+              </Link>
+            );
+          }
+
+          return (
+            <Link
+              key={`beranda-program-kerja-list-item-${id}`}
+              href={link}
+              className="flex flex-col gap-8 rounded-lg bg-gradient-beranda-proker-card py-8 px-5 outline-none ring-inquares-hippie-green-500/80 delay-75 duration-300 hover:ring-4 focus:ring-4"
+            >
+              <picture className="flex h-40 w-full">
+                <Image
+                  src={image}
+                  alt="Mapping Kompetensi dan Minat Illustration"
+                  className="h-full w-full object-contain"
+                />
+              </picture>
+
+              <div className="text-inquares flex flex-col items-center justify-center gap-2 text-center text-inquares-hippie-green-900">
+                <h1 className="text-xl font-bold sm:text-2xl">{title}</h1>
+                <p>{description}</p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
   </>
 );
 
+export const getStaticProps = async () => ({
+  props: {
+    programKerjaList: [
+      {
+        id: 1,
+        title: "Mapping Kompetensi dan Minat",
+        description:
+          "Program kerja ini bertujuan untuk mengetahui minat, bakat, serta potensi yang dimiliki oleh setiap mahasiswa Informatika dan Bisnis Digital ITK.",
+        image: mappingKompetensiDanMinatIllustration,
+        link: "/program-kerja/mapping-kompetensi-dan-minat",
+      },
+      {
+        id: 2,
+        title: "Database Capaian Mahasiswa",
+        description:
+          "Program kerja ini bertujuan untuk mengetahui capaian mahasiswa Informatika dan Bisnis Digital ITK dalam berbagai bidang, baik bidang akademik maupun non-akademik.",
+        image: databaseCapaianMahasiswaIllustration,
+        link: "/program-kerja/database-capaian-mahasiswa",
+      },
+      {
+        id: 3,
+        title: "Video Learning Center",
+        description:
+          "Menyediakan video pembelajaran yang berkualitas tinggi untuk memfasilitasi proses pembelajaran mahasiswa. Video-video ini dibuat dengan tujuan untuk memudahkan mahasiswa mencari sumber daya belajar.",
+        image: videoLearningCenterIllustration,
+        link: "/program-kerja/video-learning-center",
+      },
+      {
+        id: 4,
+        title: "Program Peningkatan Kompetensi dan Keterampilan",
+        description:
+          "Kegiatan mahasiswa untuk melatih, membimbing, dan mengajarkan ilmu sesuai dengan minat dan bakat masing-masing mahasiswa Informatika dan Bisnis Digital ITK.",
+        image: programKompetensiDanKeterampilanIllustration,
+        link: "/program-kerja/program-peningkatan-kompetensi-dan-keterampilan",
+      },
+      {
+        id: 5,
+        title: "Peningkatan Kompetensi dan Wawasan: Acara Kuliah Tamu HMIF",
+        description:
+          "Kegiatan ini diselenggarakan untuk menambah dan memperluas wawasan mahasiswa Informatika melalui pembicara yang sesuai dengan bidangnya khususnya di bidang Informatika atau lainnya.",
+        image: kuliahTamuIllustration,
+        link: "/program-kerja/kuliah-tamu-hmif",
+      },
+      {
+        id: 6,
+        title: "Ngobrol Santai",
+        description:
+          "Kegiatan ini bertujuan untuk meningkatkan keterampilan berbicara dan mendengarkan, mengembangkan kemampuan berdiskusi, serta meningkatkan wawasan mahasiswa Informatika dan Bisnis Digital ITK.",
+        image: ngobrolSantaiIllustration,
+        link: "/program-kerja/ngobrol-santai",
+      },
+      {
+        id: 7,
+        title: "Hackathon HMIF",
+        description:
+          "Kegiatan ini diselenggarakan untuk mengasah skill dengan mengadu kemampuan mahasiswa Informatika pada ajang ini untuk mempersiapkan mahasiswa-mahasiswa pada ajang kompetitif lainnya.",
+        image: hackathonHmifIllustration,
+        link: "/program-kerja/hackathon-hmif",
+      },
+    ],
+  },
+});
 export default Home;
