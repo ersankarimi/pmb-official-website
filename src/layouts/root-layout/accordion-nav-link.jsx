@@ -38,11 +38,12 @@ export const AccordionNavLink = ({
         </AccordionTrigger>
       </AccordionHeader>
       <AccordionContent className="mt-2 flex-col gap-2 rounded-xl py-2 data-[state='open']:flex data-[state='closed']:hidden">
-        {accordionItems.map(({ label, href }) => (
+        {accordionItems.map(({ label, href, target = "_self" }) => (
           <Link
             href={href}
+            target={target}
             key={`accordion-navlink-${href}`}
-            className="w-full rounded-sm px-3 py-2 font-medium text-inquares-blue-whale-500/80 outline-none transition-all duration-200 hover:bg-inquares-pizazz-200 hover:text-inquares-blue-whale-500 focus:bg-inquares-pizazz-200 focus:ring-2 focus:ring-inquares-pizazz-500/60 sm:rounded-none"
+            className="w-max rounded-md px-3 py-2 text-lg text-inquares-blue-whale-500/80 outline-none transition-all duration-200 hover:bg-inquares-pizazz-200 hover:text-inquares-blue-whale-500 focus:bg-inquares-pizazz-200 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-pizazz-500/60 active:text-inquares-blue-whale-600 sm:rounded-none"
           >
             {label}
           </Link>
