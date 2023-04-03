@@ -1,7 +1,11 @@
 import cn from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { MdMenu } from "react-icons/md";
+import { FaDiscord, FaGithub } from "react-icons/fa";
+import { MdClose, MdMenu } from "react-icons/md";
+
+import { Separator } from "@/components";
 
 import { useMediaQuery } from "@/hooks";
 
@@ -57,6 +61,19 @@ const lainnyaItems = [
   {
     label: "Sumber Belajar",
     href: "/sumber-belajar",
+  },
+];
+
+const lingkunganItems = [
+  {
+    label: "Github",
+    href: "https://github.com/pmb-community",
+    target: "_blank",
+  },
+  {
+    label: "Discord",
+    href: "https://discord.gg/qsHUEshECN",
+    target: "_blank",
   },
 ];
 
@@ -122,12 +139,16 @@ export const Header = () => {
             className="rounded-md bg-inquares-hippie-green-300/60 p-1 outline-none ring-inquares-hippie-green-400/80 backdrop-blur-xl transition-all duration-200 hover:bg-inquares-hippie-green-300/80 focus:ring-2 active:bg-inquares-hippie-green-300 active:ring-[3px] lg:hidden"
             onClick={handleToggleNavbar}
           >
-            <MdMenu className="h-6 w-6 text-inquares-hippie-green-800/60 hover:text-inquares-hippie-green-800/80 active:text-inquares-hippie-green-800" />
+            {navbarIsOpen ? (
+              <MdClose className="h-6 w-6 text-inquares-hippie-green-800/60 hover:text-inquares-hippie-green-800/80 active:text-inquares-hippie-green-800" />
+            ) : (
+              <MdMenu className="h-6 w-6 text-inquares-hippie-green-800/60 hover:text-inquares-hippie-green-800/80 active:text-inquares-hippie-green-800" />
+            )}
           </button>
 
           <ul
             className={cn(
-              "absolute left-0 top-full h-screen w-full flex-col gap-3 overflow-auto bg-inquares-loafer-500 p-8 pb-20 lg:static lg:flex lg:h-auto lg:flex-row lg:gap-8 lg:overflow-visible lg:bg-transparent lg:p-0",
+              "absolute left-0 top-full flex h-screen w-full flex-col gap-6 overflow-auto bg-inquares-loafer-500 p-8 pb-20 lg:static lg:flex lg:h-auto lg:flex-row lg:gap-6 lg:overflow-visible lg:bg-transparent lg:p-0",
               {
                 hidden: !navbarIsOpen,
                 flex: navbarIsOpen,
@@ -178,6 +199,42 @@ export const Header = () => {
                   triggerTextValue="Lainnya"
                   accordionItemValue="lainnya"
                   accordionItems={lainnyaItems}
+                />
+              )}
+            </li>
+
+            <li className="hidden items-center lg:flex">
+              <Separator
+                orientation="vertical"
+                className="hidden h-1/2 w-[1px] bg-inquares-blue-whale-500/40 lg:block"
+              />
+            </li>
+            <li className="items-center gap-4 lg:flex">
+              {!isUnderLG ? (
+                <div className="flex items-center gap-2">
+                  <Link
+                    href="https://github.com/pmb-community"
+                    target="_blank"
+                    className="p-1"
+                  >
+                    <FaGithub className="h-5 w-5 text-inquares-blue-whale-500/70 outline-none transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400 active:scale-75 lg:text-base xl:text-lg" />
+                  </Link>
+                  <Link
+                    href="https://discord.gg/qsHUEshECN"
+                    target="_blank"
+                    className="p-1"
+                  >
+                    <FaDiscord className="h-5 w-5 text-inquares-blue-whale-500/70 outline-none transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400 active:scale-75 lg:text-base xl:text-lg" />
+                  </Link>
+                </div>
+              ) : (
+                <AccordionNavLink
+                  value={selectedAccordionItem}
+                  isOpen={selectedAccordionItem === "lingkungan"}
+                  onValueChange={handleAccordionChange}
+                  triggerTextValue="Lingkungan"
+                  accordionItemValue="lingkungan"
+                  accordionItems={lingkunganItems}
                 />
               )}
             </li>
