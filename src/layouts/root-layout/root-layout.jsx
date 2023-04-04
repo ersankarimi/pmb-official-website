@@ -18,12 +18,14 @@ export const metadata = {
   },
 };
 
-export const RootLayout = ({ children }) => (
-  <>
-    <Header />
-    <main className="m-auto flex max-w-7xl flex-[2] flex-col gap-40 overflow-x-hidden p-4 lg:container md:p-8 xl:p-12">
-      {children}
-    </main>
-    <Footer />
-  </>
-);
+export const RootLayout = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <main className="m-auto flex max-w-7xl flex-[2] flex-col gap-40 overflow-x-hidden p-4 lg:container md:p-8 xl:p-12">
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
+};
