@@ -168,7 +168,7 @@ export const getStaticProps = async () => {
           description:
             "Program kerja ini bertujuan untuk mengetahui minat, bakat, serta potensi yang dimiliki oleh setiap mahasiswa Informatika dan Bisnis Digital ITK.",
           image: mappingKompetensiDanMinatIllustration,
-          link: "/program-kerja/mapping-kompetensi-dan-minat",
+          link: "/proker/mapping-kompetensi-dan-minat",
         },
         {
           id: 2,
@@ -176,7 +176,7 @@ export const getStaticProps = async () => {
           description:
             "Program kerja ini bertujuan untuk mengetahui capaian mahasiswa Informatika dan Bisnis Digital ITK dalam berbagai bidang, baik bidang akademik maupun non-akademik.",
           image: databaseCapaianMahasiswaIllustration,
-          link: "/program-kerja/database-capaian-mahasiswa",
+          link: "/proker/database-capaian-mahasiswa",
         },
         {
           id: 3,
@@ -184,7 +184,7 @@ export const getStaticProps = async () => {
           description:
             "Menyediakan video pembelajaran yang berkualitas tinggi untuk memfasilitasi proses pembelajaran mahasiswa. Video-video ini dibuat dengan tujuan untuk memudahkan mahasiswa mencari sumber daya belajar.",
           image: videoLearningCenterIllustration,
-          link: "/program-kerja/video-learning-center",
+          link: "/proker/video-learning-center",
         },
         {
           id: 4,
@@ -192,7 +192,7 @@ export const getStaticProps = async () => {
           description:
             "Kegiatan mahasiswa untuk melatih, membimbing, dan mengajarkan ilmu sesuai dengan minat dan bakat masing-masing mahasiswa Informatika dan Bisnis Digital ITK.",
           image: programKompetensiDanKeterampilanIllustration,
-          link: "/program-kerja/program-peningkatan-kompetensi-dan-keterampilan",
+          link: "/proker/program-peningkatan-kompetensi-dan-keterampilan",
         },
         {
           id: 5,
@@ -200,7 +200,7 @@ export const getStaticProps = async () => {
           description:
             "Kegiatan ini diselenggarakan untuk menambah dan memperluas wawasan mahasiswa Informatika melalui pembicara yang sesuai dengan bidangnya khususnya di bidang Informatika atau lainnya.",
           image: kuliahTamuIllustration,
-          link: "/program-kerja/kuliah-tamu-hmif",
+          link: "/proker/kuliah-tamu-hmif",
         },
         {
           id: 6,
@@ -208,7 +208,7 @@ export const getStaticProps = async () => {
           description:
             "Kegiatan ini bertujuan untuk meningkatkan keterampilan berbicara dan mendengarkan, mengembangkan kemampuan berdiskusi, serta meningkatkan wawasan mahasiswa Informatika dan Bisnis Digital ITK.",
           image: ngobrolSantaiIllustration,
-          link: "/program-kerja/ngobrol-santai",
+          link: "/proker/ngobrol-santai",
         },
         {
           id: 7,
@@ -216,7 +216,7 @@ export const getStaticProps = async () => {
           description:
             "Kegiatan ini diselenggarakan untuk mengasah skill dengan mengadu kemampuan mahasiswa Informatika pada ajang ini untuk mempersiapkan mahasiswa-mahasiswa pada ajang kompetitif lainnya.",
           image: hackathonHmifIllustration,
-          link: "/program-kerja/hackathon-hmif",
+          link: "/proker/hackathon-hmif",
         },
       ],
     },

@@ -21,31 +21,31 @@ import { NavLink } from "./nav-link";
 const programKerjaList = [
   {
     label: "Mapping Kompetensi dan Minat",
-    href: "/mapping-kompetensi-dan-minat",
+    href: "proker/mapping-kompetensi-dan-minat",
   },
   {
     label: "Database Capaian Mahasiswa",
-    href: "/database-capaian-mahasiswa",
+    href: "proker/database-capaian-mahasiswa",
   },
   {
     label: "Video Learning Center",
-    href: "/video-learning-center",
+    href: "proker/video-learning-center",
   },
   {
     label: "Program Peningkatan Kompetensi dan Keterampilan",
-    href: "/program-peningkatan-kompetensi-dan-keterampilan",
+    href: "proker/program-peningkatan-kompetensi-dan-keterampilan",
   },
   {
     label: "Peningkatan Kompetensi dan Wawasan: Acara Kuliah Tamu HMIF",
-    href: "/kuliah-tamu-hmif",
+    href: "proker/kuliah-tamu-hmif",
   },
   {
     label: "Ngobrol Santai",
-    href: "/ngobrol-santai",
+    href: "proker/ngobrol-santai",
   },
   {
     label: "Hackathon HMIF",
-    href: "/hackathon-hmif",
+    href: "proker/hackathon-hmif",
   },
 ];
 
