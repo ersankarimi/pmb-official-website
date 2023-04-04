@@ -2,7 +2,7 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { CheckIcon, DividerHorizontalIcon } from "@radix-ui/react-icons";
 import React, { forwardRef } from "react";
 
-export const DropdownMenu = DropdownMenuPrimitive.Root;
+export const DropdownMenuRoot = DropdownMenuPrimitive.Root;
 export const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
 export const DropdownMenuLabel = DropdownMenuPrimitive.Label;
 export const DropdownMenuItem = DropdownMenuPrimitive.Item;
