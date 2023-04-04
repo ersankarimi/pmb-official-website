@@ -19,7 +19,7 @@ export const DropdownNavLink = ({
         className="group flex items-center rounded-sm p-1 text-2xl font-semibold text-inquares-blue-whale-500/70 outline-none outline-1 transition-all duration-200 hover:text-inquares-blue-whale-500 focus:text-inquares-blue-whale-500 focus:outline-inquares-hippie-green-300 focus:ring-2 focus:ring-inquares-hippie-green-400 lg:text-base xl:text-lg"
       >
         {triggerTextValue}
-        <MdKeyboardArrowDown className="text-inquares-blue-whale-500/80 group-hover:text-inquares-blue-whale-500" />
+        <MdKeyboardArrowDown className="text-inquares-blue-whale-500/80 duration-150 group-hover:text-inquares-blue-whale-500 group-data-[state='open']:-rotate-180" />
       </button>
     </DropdownMenuTrigger>
     <DropdownMenuContent
