@@ -215,16 +215,16 @@ export const Header = () => {
                   <Link
                     href="https://github.com/pmb-community"
                     target="_blank"
-                    className="p-1"
+                    className="rounded-sm p-1 outline-none focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400"
                   >
-                    <FaGithub className="h-5 w-5 text-inquares-blue-whale-500/70 outline-none transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400 active:scale-75 lg:text-base xl:text-lg" />
+                    <FaGithub className="h-5 w-5 text-inquares-blue-whale-500/70 transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 active:scale-75 lg:text-base xl:text-lg" />
                   </Link>
                   <Link
                     href="https://discord.gg/qsHUEshECN"
                     target="_blank"
-                    className="p-1"
+                    className="rounded-sm p-1 outline-none focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400"
                   >
-                    <FaDiscord className="h-5 w-5 text-inquares-blue-whale-500/70 outline-none transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400 active:scale-75 lg:text-base xl:text-lg" />
+                    <FaDiscord className="h-5 w-5 text-inquares-blue-whale-500/70 transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 lg:text-base xl:text-lg" />
                   </Link>
                 </div>
               ) : (
