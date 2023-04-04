@@ -104,7 +104,7 @@ export const Header = () => {
   }, [isUnderLG]);
 
   return (
-    <header className="sticky top-0 z-10 m-auto w-full bg-inquares-loafer-500 bg-inquares-loafer-500/80 py-3 px-6 shadow-sm backdrop-blur-[6px] md:px-8 lg:px-12 lg:py-4">
+    <header className="sticky top-0 z-10 w-full bg-inquares-loafer-500 bg-inquares-loafer-500/80 py-3 px-6 shadow-sm backdrop-blur-[6px] md:px-8 lg:px-12 lg:py-4">
       <div className="m-auto flex w-full items-center justify-between lg:container">
         <div className="flex items-center gap-2 md:gap-4">
           <Image
@@ -162,7 +162,7 @@ export const Header = () => {
             </li>
 
             <li className="flex items-center">
-              <NavLink href="/" onClick={handleToggleNavbar}>
+              <NavLink href="/tentang-kami" onClick={handleToggleNavbar}>
                 Tentang
               </NavLink>
             </li>
