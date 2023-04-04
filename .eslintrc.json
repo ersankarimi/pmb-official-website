@@ -34,6 +34,7 @@
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
     "object-curly-newline": "off",
+    "arrow-body-style": "off",
     "react/function-component-definition": [
       "error",
       {
