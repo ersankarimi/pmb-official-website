@@ -104,7 +104,7 @@ export const Header = () => {
   }, [isUnderLG]);
 
   return (
-    <header className="sticky top-0 z-10 m-auto w-full bg-inquares-loafer-500 bg-inquares-loafer-500/80 py-3 px-6 shadow-sm backdrop-blur-[6px] md:px-8 lg:px-12 lg:py-4">
+    <header className="sticky top-0 z-10 w-full bg-inquares-loafer-500 bg-inquares-loafer-500/80 py-3 px-6 shadow-sm backdrop-blur-[6px] md:px-8 lg:px-12 lg:py-4">
       <div className="m-auto flex w-full items-center justify-between lg:container">
         <div className="flex items-center gap-2 md:gap-4">
           <Image
@@ -162,7 +162,7 @@ export const Header = () => {
             </li>
 
             <li className="flex items-center">
-              <NavLink href="/" onClick={handleToggleNavbar}>
+              <NavLink href="/tentang-kami" onClick={handleToggleNavbar}>
                 Tentang
               </NavLink>
             </li>
@@ -215,16 +215,16 @@ export const Header = () => {
                   <Link
                     href="https://github.com/pmb-community"
                     target="_blank"
-                    className="p-1"
+                    className="rounded-sm p-1 outline-none focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400"
                   >
-                    <FaGithub className="h-5 w-5 text-inquares-blue-whale-500/70 outline-none transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400 active:scale-75 lg:text-base xl:text-lg" />
+                    <FaGithub className="h-5 w-5 text-inquares-blue-whale-500/70 transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 active:scale-75 lg:text-base xl:text-lg" />
                   </Link>
                   <Link
                     href="https://discord.gg/qsHUEshECN"
                     target="_blank"
-                    className="p-1"
+                    className="rounded-sm p-1 outline-none focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400"
                   >
-                    <FaDiscord className="h-5 w-5 text-inquares-blue-whale-500/70 outline-none transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-hippie-green-400 active:scale-75 lg:text-base xl:text-lg" />
+                    <FaDiscord className="h-5 w-5 text-inquares-blue-whale-500/70 transition-all duration-200 hover:scale-125 hover:text-inquares-blue-whale-500 lg:text-base xl:text-lg" />
                   </Link>
                 </div>
               ) : (
