@@ -9,6 +9,6 @@
   }
 
   #__next {
-    @apply relative w-full;
+    @apply relative flex min-h-screen w-full flex-col;
   }
 }

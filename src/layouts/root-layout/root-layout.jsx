@@ -23,7 +23,7 @@ export const RootLayout = ({ children }) => {
         <link rel="shortcut icon" href="/logo-pmb.png" />
       </Head>
       <Header />
-      <main className="m-auto flex max-w-7xl flex-[2] flex-col gap-40 overflow-x-hidden p-4 lg:container md:p-8 xl:p-12">
+      <main className="m-auto flex max-w-7xl flex-[2] flex-col gap-40 overflow-x-hidden px-4 py-12 lg:container md:p-8 xl:p-12">
         {children}
       </main>
       <Footer />
