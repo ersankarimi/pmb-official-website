@@ -19,8 +19,8 @@ export const RootLayout = ({ children }) => {
           name="description"
           content="Website Departemen Pengembangan Minat dan Bakat HMIF 2023"
         />
-        <link rel="icon" href="/logo-pmb.png" />
-        <link rel="shortcut icon" href="/logo-pmb.png" />
+        <link rel="icon" href="/assets/logo/logo-pmb.png" />
+        <link rel="shortcut icon" href="/assets/logo/logo-pmb.png" />
       </Head>
       <Header />
       <main className="m-auto flex max-w-7xl flex-[2] flex-col gap-40 overflow-x-hidden px-4 py-12 lg:container md:p-8 xl:p-12">
