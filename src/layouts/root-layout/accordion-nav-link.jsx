@@ -17,6 +17,7 @@ export const AccordionNavLink = ({
   accordionItemValue = "",
   accordionItems = "",
   onValueChange = () => {},
+  handleToggleNavbar = () => {},
 }) => {
   return (
     <Accordion
@@ -43,8 +44,9 @@ export const AccordionNavLink = ({
             <Link
               href={href}
               target={target}
+              onClick={handleToggleNavbar}
               key={`accordion-navlink-${href}`}
-              className="w-max rounded-md px-3 py-2 text-lg text-inquares-blue-whale-500/80 outline-none transition-all duration-200 hover:bg-inquares-pizazz-200 hover:text-inquares-blue-whale-500 focus:bg-inquares-pizazz-200 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-pizazz-500/60 active:text-inquares-blue-whale-600 sm:rounded-none"
+              className="rounded-md px-3 py-2 text-lg text-inquares-blue-whale-500/80 outline-none transition-all duration-200 hover:bg-inquares-pizazz-200 hover:text-inquares-blue-whale-500 focus:bg-inquares-pizazz-200 focus:text-inquares-blue-whale-500 focus:ring-2 focus:ring-inquares-pizazz-500/60 active:text-inquares-blue-whale-600 sm:rounded-none"
             >
               {label}
             </Link>

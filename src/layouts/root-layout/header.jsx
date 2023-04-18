@@ -9,11 +9,11 @@ import { Separator } from "@/components";
 
 import { useMediaQuery } from "@/hooks";
 
-import logoHmif from "../../../public/logo-hmif.png";
-import logoInquares from "../../../public/logo-inquares.png";
-import logoItk from "../../../public/logo-itk.png";
-import logoKm from "../../../public/logo-km.png";
-import logoPmb from "../../../public/logo-pmb.png";
+import logoHmif from "../../../public/assets/logo/logo-hmif.png";
+import logoInquares from "../../../public/assets/logo/logo-inquares.png";
+import logoItk from "../../../public/assets/logo/logo-itk.png";
+import logoKm from "../../../public/assets/logo/logo-km.png";
+import logoPmb from "../../../public/assets/logo/logo-pmb.png";
 import { AccordionNavLink } from "./accordion-nav-link";
 import { DropdownNavLink } from "./dropdown-nav-link";
 import { NavLink } from "./nav-link";
@@ -21,31 +21,31 @@ import { NavLink } from "./nav-link";
 const programKerjaList = [
   {
     label: "Mapping Kompetensi dan Minat",
-    href: "/mapping-kompetensi-dan-minat",
+    href: "/program-kerja/mapping-kompetensi-dan-minat",
   },
   {
     label: "Database Capaian Mahasiswa",
-    href: "/database-capaian-mahasiswa",
+    href: "/program-kerja/database-capaian-mahasiswa",
   },
   {
     label: "Video Learning Center",
-    href: "/video-learning-center",
+    href: "/program-kerja/video-learning-center",
   },
   {
     label: "Program Peningkatan Kompetensi dan Keterampilan",
-    href: "/program-peningkatan-kompetensi-dan-keterampilan",
+    href: "/program-kerja/program-peningkatan-kompetensi-dan-keterampilan",
   },
   {
     label: "Peningkatan Kompetensi dan Wawasan: Acara Kuliah Tamu HMIF",
-    href: "/kuliah-tamu-hmif",
+    href: "/program-kerja/kuliah-tamu-hmif",
   },
   {
     label: "Ngobrol Santai",
-    href: "/ngobrol-santai",
+    href: "/program-kerja/ngobrol-santai",
   },
   {
     label: "Hackathon HMIF",
-    href: "/hackathon-hmif",
+    href: "/program-kerja/hackathon-hmif",
   },
 ];
 
@@ -181,6 +181,7 @@ export const Header = () => {
                   value={selectedAccordionItem}
                   accordionItemValue="program-kerja"
                   accordionItems={programKerjaList}
+                  handleToggleNavbar={handleToggleNavbar}
                 />
               )}
             </li>
@@ -199,6 +200,7 @@ export const Header = () => {
                   triggerTextValue="Lainnya"
                   accordionItemValue="lainnya"
                   accordionItems={lainnyaItems}
+                  handleToggleNavbar={handleToggleNavbar}
                 />
               )}
             </li>

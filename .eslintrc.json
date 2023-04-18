@@ -22,6 +22,7 @@
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
     "import/extensions": ["error", "never", { "svg": "always" }],
+    "react/button-has-type": "off",
     "no-console": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",

@@ -1,22 +1,41 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 
 import { Separator } from "@/components";
 
-import databaseCapaianMahasiswaIllustration from "../../public/database-capaian-mahasiswa-illustration.png";
-import hackathonHmifIllustration from "../../public/hackathon-hmif-illustration.png";
-import heroTentangKami from "../../public/hero-tentang-kami.png";
-import heroImage from "../../public/hero.png";
-import kuliahTamuIllustration from "../../public/kuliah-tamu-illustration.png";
-import mappingKompetensiDanMinatIllustration from "../../public/mapping-kompetensi-dan-minat-illustration.png";
-import ngobrolSantaiIllustration from "../../public/ngobrol-santai-illustration.png";
-import programKompetensiDanKeterampilanIllustration from "../../public/program-kompetensi-dan-keterampilan-illustration.png";
-import videoLearningCenterIllustration from "../../public/video-learning-center-illustration.png";
+import databaseCapaianMahasiswaIllustration from "../../public/assets/database-capaian-mahasiswa-illustration.png";
+import hackathonHmifIllustration from "../../public/assets/hackathon-hmif-illustration.png";
+import heroImage from "../../public/assets/hero-beranda-illustration.png";
+import heroTentangKami from "../../public/assets/hero-tentang-kami-illustration.png";
+import kuliahTamuIllustration from "../../public/assets/kuliah-tamu-illustration.png";
+import mappingKompetensiDanMinatIllustration from "../../public/assets/mapping-kompetensi-dan-minat-illustration.png";
+import ngobrolSantaiIllustration from "../../public/assets/ngobrol-santai-illustration.png";
+import programKompetensiDanKeterampilanIllustration from "../../public/assets/program-kompetensi-dan-keterampilan-illustration.png";
+import videoLearningCenterIllustration from "../../public/assets/video-learning-center-illustration.png";
 
 const Home = ({ programKerjaList }) => {
   return (
     <>
+      <Head>
+        <title>Beranda | PMB HMIF 2023</title>
+        <meta
+          name="description"
+          content="Selamat datang di website PMB HMIF 2023. Website ini berisi informasi mengenai PMB HMIF 2023, program kerja HMIF, sumber belajar, dan lainnya yang dapat membantu kamu dalam mengembangkan diri dan menambah wawasan."
+        />
+        <meta property="og:title" content="Beranda | PMB HMIF 2023" />
+        <meta
+          property="og:description"
+          content="Selamat datang di website PMB HMIF 2023. Website ini berisi informasi mengenai PMB HMIF 2023, program kerja HMIF, sumber belajar, dan lainnya yang dapat membantu kamu dalam mengembangkan diri dan menambah wawasan."
+        />
+        <meta property="og:url" content="https://pmb-community.vercel.app/" />
+        <meta
+          property="og:image"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/beranda.png"
+        />
+      </Head>
+
       <section className="grid grid-cols-1 grid-rows-[max-content_1fr] gap-12 md:grid-rows-none lg:grid-cols-[1fr_1fr] xl:grid-cols-[1.25fr_1fr] 2xl:grid-cols-[1.5fr_1fr]">
         <div className="flex h-max flex-col items-center justify-center gap-8 text-center lg:items-start lg:text-left">
           <div className="flex flex-col gap-4 sm:w-5/6 lg:w-full">
@@ -168,7 +187,7 @@ export const getStaticProps = async () => {
           description:
             "Program kerja ini bertujuan untuk mengetahui minat, bakat, serta potensi yang dimiliki oleh setiap mahasiswa Informatika dan Bisnis Digital ITK.",
           image: mappingKompetensiDanMinatIllustration,
-          link: "/program-kerja/mapping-kompetensi-dan-minat",
+          link: "/proker/mapping-kompetensi-dan-minat",
         },
         {
           id: 2,
@@ -176,7 +195,7 @@ export const getStaticProps = async () => {
           description:
             "Program kerja ini bertujuan untuk mengetahui capaian mahasiswa Informatika dan Bisnis Digital ITK dalam berbagai bidang, baik bidang akademik maupun non-akademik.",
           image: databaseCapaianMahasiswaIllustration,
-          link: "/program-kerja/database-capaian-mahasiswa",
+          link: "/proker/database-capaian-mahasiswa",
         },
         {
           id: 3,
@@ -184,7 +203,7 @@ export const getStaticProps = async () => {
           description:
             "Menyediakan video pembelajaran yang berkualitas tinggi untuk memfasilitasi proses pembelajaran mahasiswa. Video-video ini dibuat dengan tujuan untuk memudahkan mahasiswa mencari sumber daya belajar.",
           image: videoLearningCenterIllustration,
-          link: "/program-kerja/video-learning-center",
+          link: "/proker/video-learning-center",
         },
         {
           id: 4,
@@ -192,7 +211,7 @@ export const getStaticProps = async () => {
           description:
             "Kegiatan mahasiswa untuk melatih, membimbing, dan mengajarkan ilmu sesuai dengan minat dan bakat masing-masing mahasiswa Informatika dan Bisnis Digital ITK.",
           image: programKompetensiDanKeterampilanIllustration,
-          link: "/program-kerja/program-peningkatan-kompetensi-dan-keterampilan",
+          link: "/proker/program-peningkatan-kompetensi-dan-keterampilan",
         },
         {
           id: 5,
@@ -200,7 +219,7 @@ export const getStaticProps = async () => {
           description:
             "Kegiatan ini diselenggarakan untuk menambah dan memperluas wawasan mahasiswa Informatika melalui pembicara yang sesuai dengan bidangnya khususnya di bidang Informatika atau lainnya.",
           image: kuliahTamuIllustration,
-          link: "/program-kerja/kuliah-tamu-hmif",
+          link: "/proker/kuliah-tamu-hmif",
         },
         {
           id: 6,
@@ -208,7 +227,7 @@ export const getStaticProps = async () => {
           description:
             "Kegiatan ini bertujuan untuk meningkatkan keterampilan berbicara dan mendengarkan, mengembangkan kemampuan berdiskusi, serta meningkatkan wawasan mahasiswa Informatika dan Bisnis Digital ITK.",
           image: ngobrolSantaiIllustration,
-          link: "/program-kerja/ngobrol-santai",
+          link: "/proker/ngobrol-santai",
         },
         {
           id: 7,
@@ -216,10 +235,11 @@ export const getStaticProps = async () => {
           description:
             "Kegiatan ini diselenggarakan untuk mengasah skill dengan mengadu kemampuan mahasiswa Informatika pada ajang ini untuk mempersiapkan mahasiswa-mahasiswa pada ajang kompetitif lainnya.",
           image: hackathonHmifIllustration,
-          link: "/program-kerja/hackathon-hmif",
+          link: "/proker/hackathon-hmif",
         },
       ],
     },
   };
 };
+
 export default Home;

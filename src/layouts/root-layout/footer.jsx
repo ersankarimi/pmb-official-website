@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 
-import logoPMB from "../../../public/logo-pmb.png";
+import logoPMB from "../../../public/assets/logo/logo-pmb.png";
 
 const lingkunganItems = [
   {
@@ -69,7 +69,7 @@ const footerItems = [
 
 export const Footer = () => {
   return (
-    <footer className="mt-12 flex flex-col items-center justify-center gap-5 bg-inquares-hippie-green-300/40 p-8 py-4 px-6 shadow-sm backdrop-blur-md md:px-8 lg:px-12 lg:py-20">
+    <footer className="mt-12 flex flex-col items-center justify-center gap-5 bg-inquares-hippie-green-300/40 p-8 py-12 px-6 shadow-sm backdrop-blur-md md:px-8 lg:px-12 lg:py-20">
       <div className="container flex flex-col items-center justify-between gap-12">
         <div className="flex flex-col items-center gap-5">
           <div className="flex flex-col items-center justify-center gap-3">
@@ -101,7 +101,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-12 md:grid-cols-3">
+        <div className="grid grid-cols-2 content-center justify-items-center gap-12 md:grid-cols-3">
           {footerItems.map(({ title, items }) => {
             return (
               <div
