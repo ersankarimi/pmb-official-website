@@ -181,6 +181,7 @@ export const Header = () => {
                   value={selectedAccordionItem}
                   accordionItemValue="program-kerja"
                   accordionItems={programKerjaList}
+                  handleToggleNavbar={handleToggleNavbar}
                 />
               )}
             </li>
@@ -199,6 +200,7 @@ export const Header = () => {
                   triggerTextValue="Lainnya"
                   accordionItemValue="lainnya"
                   accordionItems={lainnyaItems}
+                  handleToggleNavbar={handleToggleNavbar}
                 />
               )}
             </li>
