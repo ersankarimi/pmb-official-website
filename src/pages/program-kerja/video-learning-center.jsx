@@ -25,7 +25,7 @@ const VideoLearningCenter = () => {
         />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/video-learning-center.png"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/video-learning-center.png"
         />
       </Head>
 

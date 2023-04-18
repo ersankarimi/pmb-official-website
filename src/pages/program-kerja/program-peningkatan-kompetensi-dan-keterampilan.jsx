@@ -25,7 +25,7 @@ const ProgramPeningkatanKompetensiDanKeterampilan = () => {
         />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/program-kompetensi-dan-keterampilan.png"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/program-kompetensi-dan-keterampilan.png"
         />
       </Head>
 

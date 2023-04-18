@@ -22,7 +22,7 @@ const NgobrolSantai = () => {
         />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/ngobrol-santai.png"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/ngobrol-santai.png"
         />
       </Head>
 

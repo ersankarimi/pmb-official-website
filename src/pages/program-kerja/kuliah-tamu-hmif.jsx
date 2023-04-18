@@ -28,7 +28,7 @@ const KuliahTamuHmif = () => {
         />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/mapping-kompetensi-dan-minat.png"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/mapping-kompetensi-dan-minat.png"
         />
       </Head>
 

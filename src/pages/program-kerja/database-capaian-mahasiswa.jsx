@@ -25,7 +25,7 @@ const DatabaseCapaianMahasiswa = () => {
         />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/database-capaian-mahasiswa.png"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/database-capaian-mahasiswa.png"
         />
       </Head>
 

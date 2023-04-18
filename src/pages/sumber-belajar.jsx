@@ -11,7 +11,7 @@ const SumberBelajar = () => {
           name="description"
           content="Temukan sumber belajar terbaik dari berbagai sumber untuk meningkatkan keahlian programming dan skill digital Anda di website kami. Dapatkan akses ke tutorial, artikel, dan sumber daya lainnya yang akan membantu Anda mengembangkan keterampilan Anda."
         />
-        <meta property="og:title" content="Tentang Kami | PMB HMIF 2023" />
+        <meta property="og:title" content="Sumber Belajar | PMB HMIF 2023" />
         <meta
           property="og:description"
           content="Temukan sumber belajar terbaik dari berbagai sumber untuk meningkatkan keahlian programming dan skill digital Anda di website kami. Dapatkan akses ke tutorial, artikel, dan sumber daya lainnya yang akan membantu Anda mengembangkan keterampilan Anda."

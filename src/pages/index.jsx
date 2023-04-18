@@ -29,13 +29,10 @@ const Home = ({ programKerjaList }) => {
           property="og:description"
           content="Selamat datang di website PMB HMIF 2023. Website ini berisi informasi mengenai PMB HMIF 2023, program kerja HMIF, sumber belajar, dan lainnya yang dapat membantu kamu dalam mengembangkan diri dan menambah wawasan."
         />
-        <meta
-          property="og:url"
-          content="https://pmb-community.vercel.app/sumber-belajar"
-        />
+        <meta property="og:url" content="https://pmb-community.vercel.app/" />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/beranda.png"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/beranda.png"
         />
       </Head>
 

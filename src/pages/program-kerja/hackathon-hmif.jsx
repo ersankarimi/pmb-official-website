@@ -22,7 +22,7 @@ const HackathonHmif = () => {
         />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/hackathon-hmif.png"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/hackathon-hmif.png"
         />
       </Head>
 

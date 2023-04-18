@@ -11,7 +11,7 @@ const Informasi = () => {
           name="description"
           content="Informasi adalah halaman yang berisi informasi mengenai perlombaan, bootcamp, workshop, atau program lainnya yang berkaitan dengan teknologi yang diselenggarakan oleh PMB HMIF dan dari mitra lainnya yang ada di Indonesia."
         />
-        <meta property="og:title" content="Tentang Kami | PMB HMIF 2023" />
+        <meta property="og:title" content="Informasi | PMB HMIF 2023" />
         <meta
           property="og:description"
           content="Informasi adalah halaman yang berisi informasi mengenai perlombaan, bootcamp, workshop, atau program lainnya yang berkaitan dengan teknologi yang diselenggarakan oleh PMB HMIF dan dari mitra lainnya yang ada di Indonesia."
@@ -22,7 +22,7 @@ const Informasi = () => {
         />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/informasi.png"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/informasi.png"
         />
       </Head>
 
