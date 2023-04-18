@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 
-import logoPMB from "../../../public/logo-pmb.png";
+import logoPMB from "../../../public/assets/logo/logo-pmb.png";
 
 const lingkunganItems = [
   {

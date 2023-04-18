@@ -1,22 +1,44 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 
 import { Separator } from "@/components";
 
-import databaseCapaianMahasiswaIllustration from "../../public/database-capaian-mahasiswa-illustration.png";
-import hackathonHmifIllustration from "../../public/hackathon-hmif-illustration.png";
-import heroTentangKami from "../../public/hero-tentang-kami.png";
-import heroImage from "../../public/hero.png";
-import kuliahTamuIllustration from "../../public/kuliah-tamu-illustration.png";
-import mappingKompetensiDanMinatIllustration from "../../public/mapping-kompetensi-dan-minat-illustration.png";
-import ngobrolSantaiIllustration from "../../public/ngobrol-santai-illustration.png";
-import programKompetensiDanKeterampilanIllustration from "../../public/program-kompetensi-dan-keterampilan-illustration.png";
-import videoLearningCenterIllustration from "../../public/video-learning-center-illustration.png";
+import databaseCapaianMahasiswaIllustration from "../../public/assets/database-capaian-mahasiswa-illustration.png";
+import hackathonHmifIllustration from "../../public/assets/hackathon-hmif-illustration.png";
+import heroImage from "../../public/assets/hero-beranda-illustration.png";
+import heroTentangKami from "../../public/assets/hero-tentang-kami-illustration.png";
+import kuliahTamuIllustration from "../../public/assets/kuliah-tamu-illustration.png";
+import mappingKompetensiDanMinatIllustration from "../../public/assets/mapping-kompetensi-dan-minat-illustration.png";
+import ngobrolSantaiIllustration from "../../public/assets/ngobrol-santai-illustration.png";
+import programKompetensiDanKeterampilanIllustration from "../../public/assets/program-kompetensi-dan-keterampilan-illustration.png";
+import videoLearningCenterIllustration from "../../public/assets/video-learning-center-illustration.png";
 
 const Home = ({ programKerjaList }) => {
   return (
     <>
+      <Head>
+        <title>Beranda | PMB HMIF 2023</title>
+        <meta
+          name="description"
+          content="Selamat datang di website PMB HMIF 2023. Website ini berisi informasi mengenai PMB HMIF 2023, program kerja HMIF, sumber belajar, dan lainnya yang dapat membantu kamu dalam mengembangkan diri dan menambah wawasan."
+        />
+        <meta property="og:title" content="Beranda | PMB HMIF 2023" />
+        <meta
+          property="og:description"
+          content="Selamat datang di website PMB HMIF 2023. Website ini berisi informasi mengenai PMB HMIF 2023, program kerja HMIF, sumber belajar, dan lainnya yang dapat membantu kamu dalam mengembangkan diri dan menambah wawasan."
+        />
+        <meta
+          property="og:url"
+          content="https://pmb-community.vercel.app/sumber-belajar"
+        />
+        <meta
+          property="og:image"
+          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/beranda.png"
+        />
+      </Head>
+
       <section className="grid grid-cols-1 grid-rows-[max-content_1fr] gap-12 md:grid-rows-none lg:grid-cols-[1fr_1fr] xl:grid-cols-[1.25fr_1fr] 2xl:grid-cols-[1.5fr_1fr]">
         <div className="flex h-max flex-col items-center justify-center gap-8 text-center lg:items-start lg:text-left">
           <div className="flex flex-col gap-4 sm:w-5/6 lg:w-full">

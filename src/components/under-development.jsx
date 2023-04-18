@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import underDevelopmentIllustration from "../../public/under-development.png";
+import underDevelopmentIllustration from "../../public/assets/under-development-illustration.png";
 import { Button } from "./button";
 
 export const UnderDevelopment = ({ children }) => {

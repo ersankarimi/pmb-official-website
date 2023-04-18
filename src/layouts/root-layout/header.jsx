@@ -9,11 +9,11 @@ import { Separator } from "@/components";
 
 import { useMediaQuery } from "@/hooks";
 
-import logoHmif from "../../../public/logo-hmif.png";
-import logoInquares from "../../../public/logo-inquares.png";
-import logoItk from "../../../public/logo-itk.png";
-import logoKm from "../../../public/logo-km.png";
-import logoPmb from "../../../public/logo-pmb.png";
+import logoHmif from "../../../public/assets/logo/logo-hmif.png";
+import logoInquares from "../../../public/assets/logo/logo-inquares.png";
+import logoItk from "../../../public/assets/logo/logo-itk.png";
+import logoKm from "../../../public/assets/logo/logo-km.png";
+import logoPmb from "../../../public/assets/logo/logo-pmb.png";
 import { AccordionNavLink } from "./accordion-nav-link";
 import { DropdownNavLink } from "./dropdown-nav-link";
 import { NavLink } from "./nav-link";
