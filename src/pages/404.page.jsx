@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Button } from "@/components";
+
 import errorIllustration from "../../public/error-illustration.png";
 
 const ErrorPage = () => {
@@ -21,11 +23,10 @@ const ErrorPage = () => {
           yang Anda tuju.
         </p>
 
-        <Link
-          href="/"
-          className="group flex w-max items-center gap-2 rounded-md bg-inquares-pizazz-300/80 px-12 py-3 text-lg font-medium text-inquares-pizazz-900 ring-inquares-pizazz-400/80 transition-all duration-200 hover:bg-inquares-pizazz-300/90 focus:ring-2 active:bg-inquares-pizazz-300 active:ring-[3px]"
-        >
-          Kembali ke beranda
+        <Link href="/" tabIndex={-1}>
+          <Button variant="pizzaz" fontWeight="medium">
+            Kembali ke beranda
+          </Button>
         </Link>
       </div>
 
