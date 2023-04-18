@@ -6,7 +6,7 @@ import { Button } from "./button";
 
 export const UnderDevelopment = ({ children }) => {
   return (
-    <section className="grid grid-rows-[max-content_1fr] items-center gap-20 overflow-hidden lg:grid-cols-2 lg:grid-rows-1">
+    <section className="grid grid-rows-[max-content_1fr] items-center gap-8 overflow-hidden sm:gap-20 lg:grid-cols-2 lg:grid-rows-1">
       <div className="flex flex-col items-center justify-center gap-8 text-center">
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-bold text-inquares-green-apple-900 md:text-4xl xl:text-5xl">
