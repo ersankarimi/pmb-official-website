@@ -42,7 +42,11 @@ const MappingKompetensiDanMinat = () => {
             </div>
           </div>
 
-          <Link href="/" tabIndex={-1}>
+          <Link
+            href="https://docs.google.com/forms/u/2/d/e/1FAIpQLSfNQQzQZx084yq0gUqpST6ajMh7B2__iY6zKPUs3W58mBEMzg/viewform?usp=send_form"
+            target="_blank"
+            tabIndex={-1}
+          >
             <Button variant="pizzaz" fontWeight="medium">
               Isi form mapping sekarang
             </Button>
