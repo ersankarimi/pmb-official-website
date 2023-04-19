@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 
-import { Separator } from "@/components";
+import { PageSeo, Separator } from "@/components";
 
 import databaseCapaianMahasiswaIllustration from "../../public/assets/database-capaian-mahasiswa-illustration.png";
 import hackathonHmifIllustration from "../../public/assets/hackathon-hmif-illustration.png";
@@ -18,23 +18,12 @@ import videoLearningCenterIllustration from "../../public/assets/video-learning-
 const Home = ({ programKerjaList }) => {
   return (
     <>
-      <Head>
-        <title>Beranda | PMB HMIF 2023</title>
-        <meta
-          name="description"
-          content="Selamat datang di website PMB HMIF 2023. Website ini berisi informasi mengenai PMB HMIF 2023, program kerja HMIF, sumber belajar, dan lainnya yang dapat membantu kamu dalam mengembangkan diri dan menambah wawasan."
-        />
-        <meta property="og:title" content="Beranda | PMB HMIF 2023" />
-        <meta
-          property="og:description"
-          content="Selamat datang di website PMB HMIF 2023. Website ini berisi informasi mengenai PMB HMIF 2023, program kerja HMIF, sumber belajar, dan lainnya yang dapat membantu kamu dalam mengembangkan diri dan menambah wawasan."
-        />
-        <meta property="og:url" content="https://pmb-community.vercel.app/" />
-        <meta
-          property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/beranda.png"
-        />
-      </Head>
+      <PageSeo
+        title="Beranda | PMB HMIF 2023"
+        description="Selamat datang di website PMB HMIF 2023. Website ini berisi informasi mengenai PMB HMIF 2023, program kerja HMIF, sumber belajar, dan lainnya yang dapat membantu kamu dalam mengembangkan diri dan menambah wawasan."
+        url="https://pmb-community.vercel.app/"
+        imageUrl="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/beranda.png"
+      />
 
       <section className="grid grid-cols-1 grid-rows-[max-content_1fr] gap-12 md:grid-rows-none lg:grid-cols-[1fr_1fr] xl:grid-cols-[1.25fr_1fr] 2xl:grid-cols-[1.5fr_1fr]">
         <div className="flex h-max flex-col items-center justify-center gap-8 text-center lg:items-start lg:text-left">
