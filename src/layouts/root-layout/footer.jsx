@@ -69,7 +69,7 @@ const footerItems = [
 
 export const Footer = () => {
   return (
-    <footer className="mt-12 flex flex-col items-center justify-center gap-5 bg-inquares-hippie-green-300/40 p-8 py-12 px-6 shadow-sm backdrop-blur-md md:px-8 lg:px-12 lg:py-20">
+    <footer className="flex flex-col items-center justify-center gap-5 bg-inquares-hippie-green-300/40 p-8 py-12 px-6 shadow-sm backdrop-blur-md md:px-8 lg:px-12 lg:py-20">
       <div className="container flex flex-col items-center justify-between gap-12">
         <div className="flex flex-col items-center gap-5">
           <div className="flex flex-col items-center justify-center gap-3">

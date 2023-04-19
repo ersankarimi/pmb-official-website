@@ -1,35 +1,21 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/components";
+import { Button, PageSeo } from "@/components";
 
 import errorIllustration from "../../public/assets/error-illustration.png";
 
 const ErrorPage = () => {
   return (
     <>
-      <Head>
-        <title>Acara dan Kegiatan | PMB HMIF 2023</title>
-        <meta
-          name="description"
-          content="Halaman ini akan berisi mengenai acara dan kegiatan yang akan dan sudah dilaksanakan oleh PMB HMIF 2023."
-        />
-        <meta property="og:title" content="Tentang Kami | PMB HMIF 2023" />
-        <meta
-          property="og:description"
-          content="Halaman ini akan berisi mengenai acara dan kegiatan yang akan dan sudah dilaksanakan oleh PMB HMIF 2023."
-        />
-        <meta
-          property="og:url"
-          content="https://pmb-community.vercel.app/acara-dan-kegiatan"
-        />
-        <meta
-          property="og:image"
-          content="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/page-not-found.png"
-        />
-      </Head>{" "}
-      <section className="grid grid-rows-[max-content_1fr] items-center gap-20 overflow-hidden lg:grid-cols-2 lg:grid-rows-1">
+      <PageSeo
+        title="Halaman Tidak Ditemukan | PMB HMIF 2023"
+        description="Halaman yang Anda cari tidak ditemukan. Halaman ini berisi informasi mengenai halaman yang tidak ditemukan."
+        url="https://pmb-community.vercel.app/404"
+        imageUrl="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/page-not-found.png"
+      />
+
+      <section className="mx-auto grid grid-rows-[max-content_1fr] items-center gap-8 overflow-hidden px-8 py-20 lg:container md:gap-20 lg:grid-cols-2 lg:grid-rows-1">
         <div className="flex flex-col items-center justify-center gap-8 text-center">
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl font-bold text-inquares-green-apple-900 md:text-4xl xl:text-5xl">
