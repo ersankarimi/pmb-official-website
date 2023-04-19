@@ -15,7 +15,7 @@ const ErrorPage = () => {
         imageUrl="https://raw.githubusercontent.com/pmb-community/pmb-official-website/main/public/assets/pages/page-not-found.png"
       />
 
-      <section className="grid grid-rows-[max-content_1fr] items-center gap-20 overflow-hidden lg:grid-cols-2 lg:grid-rows-1">
+      <section className="mx-auto grid grid-rows-[max-content_1fr] items-center gap-8 overflow-hidden px-8 py-20 lg:container md:gap-20 lg:grid-cols-2 lg:grid-rows-1">
         <div className="flex flex-col items-center justify-center gap-8 text-center">
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl font-bold text-inquares-green-apple-900 md:text-4xl xl:text-5xl">

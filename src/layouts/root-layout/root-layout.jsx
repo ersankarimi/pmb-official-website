@@ -22,7 +22,7 @@ export const RootLayout = ({ children }) => {
       />
 
       <Header />
-      <main className="m-auto flex max-w-7xl flex-[2] flex-col gap-40 overflow-x-hidden px-4 py-12 lg:container md:p-8 xl:p-12">
+      <main className="m-auto flex h-full w-full flex-1 flex-col items-center overflow-x-hidden">
         {children}
       </main>
       <Footer />
